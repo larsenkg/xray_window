@@ -34,47 +34,15 @@ class XRayData:
     def transmission_all(self, energy, thickness):
         return self.interp_trans(energy) ** (thickness / self.thickness)
 
-def import_xray_data(material_name, xray_data_dir = None):
-    '''Load the x-ray data from the appropriate .dat file. Expects xray data to be under data/xray.
-    TO DO: Describe x-ray data format.'''
+def import_xray_data_csv(material_name, xray_data_dir = None):
+    '''Load the x-ray data from the appropriate .csv file.
+    Expected columns: Energy, Transmission, Density, Thickness
+    Energy should be in eV, Transmission should be a number less than 1,
+    Thickness should be in meters, and density should be in kg/m^3.'''
     if xray_data_dir is None:
-        xray_data_dir = os.path.join(os.path.abspath(os.path.dirname(__file__)), os.pardir, "data", "xray")
+        xray_data_dir = os.path.join("data", "xray")
 
-    filename = os.path.join(xray_data_dir, material_name + ".dat")
-    print("Trying to load " + filename)
-    # Get our arrays ready
-    energies, transmissions = [], []
-    try:
-        with open (filename) as datfile:
-            first = datfile.readline()
-
-            try:
-                thickness = float(first.split(" ")[3].split("=")[1])
-            except:
-                thickness = 0.005 # Set default to 0.005 micron
-
-            try:
-                density = float(first.split(" ")[2].split("=")[1])
-            except:
-                density = 1 # Set default to 1 g/cm^3
-
-            for line in datfile:
-                e = line[0:13].strip()
-                t = line[13:].strip()
-                try:
-                    e = float(e)
-                    t = float(t)
-                except ValueError:
-                    continue
-                energies.append(e)
-                transmissions.append(t)
-            return energies, transmissions, thickness, density
-    except EnvironmentError:
-        print("Could not read file.")
-
-def import_xray_data_csv(material_name):
-    '''Load the x-ray data from the appropriate .csv file.'''
-    filename = os.path.join("data", "xray", material_name + ".csv")
+    filename = os.path.join(xray_data_dir, material_name + ".csv")
     df       = pd.read_csv(filename)
 
     return df["Energy"].values, df["Transmission"].values, df["Thickness"].values, df["Density"].values
