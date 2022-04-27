@@ -10,28 +10,31 @@ class XRayData:
         self.material_name = material_name
         self.interp_trans = interp1d(self.energies, self.transmissions)
 
+    # def transmission(self, energy, thickness):
+    #     '''Calculate the transmission of the material with `thickness` and `energy`.'''
+    #     #Interpolation
+    #     # Find closest value that is smaller than specified energy
+    #     #closest = min(self.energies, key=lambda x:abs(x-energy))
+    #     #index = self.energies.index(closest)
+    #     index = 0
+    #     for ind, E in enumerate(self.energies):
+    #         if E > energy:
+    #             index = ind - 1
+    #             break
+
+    #     T1 = self.transmissions[index]
+    #     T2 = self.transmissions[index + 1]
+    #     E1 = self.energies[index]
+    #     E2 = self.energies[index + 1]
+
+    #     T = T1 + (energy - E1) * (T2 - T1) / (E2 - E1)
+
+    #     return T ** (thickness / self.thickness)
+
     def transmission(self, energy, thickness):
-        '''Calculate the transmission of the material with `thickness` and `energy`.'''
-        #Interpolation
-        # Find closest value that is smaller than specified energy
-        #closest = min(self.energies, key=lambda x:abs(x-energy))
-        #index = self.energies.index(closest)
-        index = 0
-        for ind, E in enumerate(self.energies):
-            if E > energy:
-                index = ind - 1
-                break
-
-        T1 = self.transmissions[index]
-        T2 = self.transmissions[index + 1]
-        E1 = self.energies[index]
-        E2 = self.energies[index + 1]
-
-        T = T1 + (energy - E1) * (T2 - T1) / (E2 - E1)
-
-        return T ** (thickness / self.thickness)
-
-    def transmission_all(self, energy, thickness):
+        '''Use the interpolated transmission values to estimate the transmission at a certain energy
+        through a given material thickness.
+        TODO: Use this interpolated method instead of what I currently do in `transmission()`'''
         return self.interp_trans(energy) ** (thickness / self.thickness)
 
 def import_xray_data_csv(material_name, xray_data_dir = None):
@@ -45,6 +48,6 @@ def import_xray_data_csv(material_name, xray_data_dir = None):
     filename = os.path.join(xray_data_dir, material_name + ".csv")
     df       = pd.read_csv(filename)
 
-    return df["Energy"].values, df["Transmission"].values, df["Thickness"].values, df["Density"].values
+    return df["Energy"].values, df["Transmission"].values, df["Thickness"].values[0], df["Density"].values[0]
 
     
