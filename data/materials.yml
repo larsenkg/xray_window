@@ -1,0 +1,82 @@
+- name: aluminum
+  youngs_modulus: 25000
+  ultimate_stress: 190
+  poisson_ratio: 0.3
+  density: 1
+  notes: >
+         From paper on discontinuous grain growth.
+         Also check here: https://www.memsnet.org/material/aluminumalfilm/
+- name: Si3N4
+  youngs_modulus: 160000
+  ultimate_stress: 2400
+  poisson_ratio: 0.25
+  density: 1
+  notes: >
+         None
+- name: polymer
+  youngs_modulus: 8500
+  ultimate_stress: 190
+  poisson_ratio: 0.22
+  density: 1
+  notes: >
+         None
+- name: SiNx
+  youngs_modulus: 290000
+  ultimate_stress: 4000
+  poisson_ratio: 0.25
+  density: 1
+  notes: >
+         Silicon rich; Ch. 5 van Rijn?
+- name: silicon
+  youngs_modulus: 150000
+  ultimate_stress: 7000
+  poisson_ratio: 0.17
+  density: 2.330
+  notes: >
+         None
+- name: polysilicon
+  youngs_modulus: 158000
+  ultimate_stress: 2000
+  poisson_ratio: 0.22
+  density: 2.330
+  notes: >
+         strength= 1.2 - 3.0 GPa
+         MECHANICAL PROPERTIES OF MEMS MATERIALS - Johns Hopkins University - DARPA
+- name: graphene
+  youngs_modulus: 1000000
+  ultimate_stress: 100000
+  poisson_ratio: 0.15
+  density: 1
+  notes: >
+         Single layer graphene
+         A. Falin et al., ?Mechanical properties of atomically thin boron nitride and the role of interlayer interactions,? Nat Commun, vol. 8, Jun. 2017.
+- name: B4C
+  youngs_modulus: 400000
+  ultimate_stress: 500
+  poisson_ratio: 0.19
+  density: 2.52
+  notes: >
+         None
+- name: BN
+  youngs_modulus: 865000
+  ultimate_stress: 70000
+  poisson_ratio: 0.19
+  density: 1
+  notes: >
+         A. Falin et al., ?Mechanical properties of atomically thin boron nitride and the role of interlayer interactions,? Nat Commun, vol. 8, Jun. 2017.
+- name: B
+  youngs_modulus: 400000
+  ultimate_stress: 3600
+  poisson_ratio: 0.17
+  density: 2.35
+  notes: >
+    https://biotsavart.tripod.com/bmt.htm
+    https://pubs.rsc.org/en/content/articlelanding/2015/CP/c4cp04050c
+- name: Be
+  youngs_modulus: 320000
+  ultimate_stress: 1000
+  poisson_ratio: 0.08
+  density: 1.848
+  notes: >
+    \nu : https://materion.com/-/media/files/beryllium/beryllium-materials/mb-003physicsandchemistryofberyllium.pdf
+    E & \sigma : https://www.sciencedirect.com/science/article/pii/S0895399605800564
