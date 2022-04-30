@@ -6,27 +6,37 @@
   notes: >
          From paper on discontinuous grain growth.
          Also check here: https://www.memsnet.org/material/aluminumalfilm/
-- name: Si3N4
-  youngs_modulus: 160000
-  ultimate_stress: 2400
-  poisson_ratio: 0.25
-  density: 1
-  notes: >
-         None
+         Density is not actually used for any of these materials.
 - name: polymer
-  youngs_modulus: 8500
-  ultimate_stress: 190
+  youngs_modulus: 9000
+  ultimate_stress: 200
   poisson_ratio: 0.22
   density: 1
   notes: >
-         None
+         Based on a high-strength polyimide.
+- name: Si3N4
+  youngs_modulus: 325000
+  ultimate_stress: 6400
+  poisson_ratio: 0.25
+  density: 1
+  notes: >
+         Stoichiometric silicon nitride
+         Care should be taken with these numbers. Si3N4 has very high intrinsic stress, and often will break at low pressures[1]
+         [1]C. Van Rijn, M. van der Wekken, W. Nijdam, and M. Elwenspoek, “Deflection and maximum load of microfiltration membrane 
+            sieves made with silicon micromachining,” Microelectromechanical Systems, Journal of, vol. 6, no. 1, pp. 48–54, 1997.
+         [2]A. Kaushik, H. Kahn, and A. H. Heuer, “Wafer-level mechanical characterization of silicon nitride MEMS,” 
+            Journal of Microelectromechanical Systems, vol. 14, no. 2, pp. 359–367, Apr. 2005, doi: 10.1109/JMEMS.2004.839315.
 - name: SiNx
   youngs_modulus: 290000
   ultimate_stress: 4000
   poisson_ratio: 0.25
   density: 1
   notes: >
-         Silicon rich; Ch. 5 van Rijn?
+         Silicon-rich silicon nitride; Ch. 5 van Rijn?
+         [1]C. Van Rijn, M. van der Wekken, W. Nijdam, and M. Elwenspoek, “Deflection and maximum load of microfiltration membrane 
+            sieves made with silicon micromachining,” Microelectromechanical Systems, Journal of, vol. 6, no. 1, pp. 48–54, 1997.
+         [2]A. Kaushik, H. Kahn, and A. H. Heuer, “Wafer-level mechanical characterization of silicon nitride MEMS,” 
+            Journal of Microelectromechanical Systems, vol. 14, no. 2, pp. 359–367, Apr. 2005, doi: 10.1109/JMEMS.2004.839315.
 - name: silicon
   youngs_modulus: 150000
   ultimate_stress: 7000
