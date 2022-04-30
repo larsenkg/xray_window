@@ -3,7 +3,7 @@ import pandas as pd
 import scipy.integrate as integrate
 from scipy.interpolate import interp1d
 
-from xraywindow.mechanical import BeamLayer
+#from xraywindow.mechanical import BeamLayer
 
 class XRaySpectrum:
     '''X-ray spectrum information.'''
@@ -52,8 +52,8 @@ class XRayWindowLayer:
     def __init__(self, layer_name, xray_data, thickness, open_area, mech_layer, mat_name=""):
         self.layer_name = layer_name
         self.xray_data  = xray_data
-        # TO DO: Old method used microns for distance. We're using meters. Fix to be consistent (use meters).
-        self.thickness  = thickness*1e6
+        # TODO: Old method used microns for distance. We're using meters. Fix to be consistent (use meters).
+        self.thickness  = thickness#*1e6
         self.open_area  = open_area
         self.mat_name   = mat_name
         self.mech_layer = mech_layer
@@ -64,12 +64,12 @@ class XRayWindowLayer:
 
     def transmission(self, energy):
         '''Calculates sum of transmission through material and open area.'''
-        # TO DO: Vectorize 'energy'!
-        return (1 - self.open_area) * self.xray_data.transmission_all(energy, self.thickness) + self.open_area
+        # TODO: Vectorize 'energy'!
+        return (1 - self.open_area) * self.xray_data.transmission(energy, self.thickness) + self.open_area
     
     def thick_str(self, t = None):
         if t is None:
-            t   = self.thickness
+            t   = self.thickness*1e6
         msg = ""
         
         if t < 1:
