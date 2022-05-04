@@ -9,4 +9,4 @@ def test_xray_data_import():
 def test_import_materials():
     """Import materials.yml and confirm TestMat matches expections."""
     materials = import_materials()
-    assert materials['TestMat'].modulus == 123456
+    assert materials['TestMat'].modulus == 123.456e9

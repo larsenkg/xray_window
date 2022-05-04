@@ -1,6 +1,6 @@
 - name: aluminum
-  youngs_modulus: 25000
-  ultimate_stress: 190
+  youngs_modulus: 25.e+9
+  ultimate_stress: 190.e+6
   poisson_ratio: 0.3
   min_thickness: 20.0e-9
   density: 1
@@ -9,16 +9,16 @@
          Also check here: https://www.memsnet.org/material/aluminumalfilm/
          Density is not actually used for any of these materials.
 - name: polymer
-  youngs_modulus: 9000
-  ultimate_stress: 200
+  youngs_modulus: 9.e+9
+  ultimate_stress: 200.e+6
   poisson_ratio: 0.22
   min_thickness: 150.0e-9
   density: 1
   notes: >
          Based on a high-strength polyimide.
 - name: Si3N4
-  youngs_modulus: 325000
-  ultimate_stress: 6400
+  youngs_modulus: 325.e+9
+  ultimate_stress: 6.4e+9
   poisson_ratio: 0.25
   min_thickness: 20.0e-9
   density: 1
@@ -30,8 +30,8 @@
          [2]A. Kaushik, H. Kahn, and A. H. Heuer, “Wafer-level mechanical characterization of silicon nitride MEMS,” 
             Journal of Microelectromechanical Systems, vol. 14, no. 2, pp. 359–367, Apr. 2005, doi: 10.1109/JMEMS.2004.839315.
 - name: SiNx
-  youngs_modulus: 290000
-  ultimate_stress: 4000
+  youngs_modulus: 290.e+9
+  ultimate_stress: 4.e+9
   poisson_ratio: 0.25
   min_thickness: 20.0e-9
   density: 1
@@ -42,16 +42,16 @@
          [2]A. Kaushik, H. Kahn, and A. H. Heuer, “Wafer-level mechanical characterization of silicon nitride MEMS,” 
             Journal of Microelectromechanical Systems, vol. 14, no. 2, pp. 359–367, Apr. 2005, doi: 10.1109/JMEMS.2004.839315.
 - name: silicon
-  youngs_modulus: 150000
-  ultimate_stress: 7000
+  youngs_modulus: 150.e+9
+  ultimate_stress: 7.e+9
   poisson_ratio: 0.17
   min_thickness: 20.0e-9
   density: 2.330
   notes: >
          None
 - name: polysilicon
-  youngs_modulus: 158000
-  ultimate_stress: 2000
+  youngs_modulus: 158.e+9
+  ultimate_stress: 2.e+9
   poisson_ratio: 0.22
   min_thickness: 20.0e-9
   density: 2.330
@@ -59,8 +59,8 @@
          strength= 1.2 - 3.0 GPa
          MECHANICAL PROPERTIES OF MEMS MATERIALS - Johns Hopkins University - DARPA
 - name: graphene
-  youngs_modulus: 1000000
-  ultimate_stress: 100000
+  youngs_modulus: 1.e+12
+  ultimate_stress: 50.e+9
   poisson_ratio: 0.15
   min_thickness: 0
   density: 1
@@ -68,33 +68,33 @@
          Single layer graphene
          A. Falin et al., ?Mechanical properties of atomically thin boron nitride and the role of interlayer interactions,? Nat Commun, vol. 8, Jun. 2017.
 - name: B4C
-  youngs_modulus: 400000
-  ultimate_stress: 500
+  youngs_modulus: 400.e+9
+  ultimate_stress: 500.e+6
   poisson_ratio: 0.19
   min_thickness: 0
   density: 2.52
   notes: >
          None
 - name: BN
-  youngs_modulus: 865000
-  ultimate_stress: 70000
+  youngs_modulus: 865.e+9
+  ultimate_stress: 70.e+9
   poisson_ratio: 0.19
   min_thickness: 0
   density: 1
   notes: >
          A. Falin et al., ?Mechanical properties of atomically thin boron nitride and the role of interlayer interactions,? Nat Commun, vol. 8, Jun. 2017.
-- name: B
-  youngs_modulus: 400000
-  ultimate_stress: 3600
+- name: boron
+  youngs_modulus: 400.e+9
+  ultimate_stress: 3.6e+9
   poisson_ratio: 0.17
   min_thickness: 0
   density: 2.35
   notes: >
     https://biotsavart.tripod.com/bmt.htm
     https://pubs.rsc.org/en/content/articlelanding/2015/CP/c4cp04050c
-- name: Be
-  youngs_modulus: 320000
-  ultimate_stress: 1000
+- name: beryllium
+  youngs_modulus: 320.e+9
+  ultimate_stress: 1.e+9
   poisson_ratio: 0.08
   min_thickness: 0
   density: 1.848
@@ -102,8 +102,8 @@
     \nu : https://materion.com/-/media/files/beryllium/beryllium-materials/mb-003physicsandchemistryofberyllium.pdf
     E & \sigma : https://www.sciencedirect.com/science/article/pii/S0895399605800564
 - name: TestMat
-  youngs_modulus: 123456
-  ultimate_stress: 789
+  youngs_modulus: 123.456e+9
+  ultimate_stress: 789.e+6
   poisson_ratio: 0.33
   min_thickness: 100.0e-9
   density: 1.23
