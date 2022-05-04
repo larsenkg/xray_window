@@ -2,6 +2,7 @@
   youngs_modulus: 25000
   ultimate_stress: 190
   poisson_ratio: 0.3
+  min_thickness: 20.0e-9
   density: 1
   notes: >
          From paper on discontinuous grain growth.
@@ -11,6 +12,7 @@
   youngs_modulus: 9000
   ultimate_stress: 200
   poisson_ratio: 0.22
+  min_thickness: 150.0e-9
   density: 1
   notes: >
          Based on a high-strength polyimide.
@@ -18,6 +20,7 @@
   youngs_modulus: 325000
   ultimate_stress: 6400
   poisson_ratio: 0.25
+  min_thickness: 20.0e-9
   density: 1
   notes: >
          Stoichiometric silicon nitride
@@ -30,6 +33,7 @@
   youngs_modulus: 290000
   ultimate_stress: 4000
   poisson_ratio: 0.25
+  min_thickness: 20.0e-9
   density: 1
   notes: >
          Silicon-rich silicon nitride; Ch. 5 van Rijn?
@@ -41,6 +45,7 @@
   youngs_modulus: 150000
   ultimate_stress: 7000
   poisson_ratio: 0.17
+  min_thickness: 20.0e-9
   density: 2.330
   notes: >
          None
@@ -48,6 +53,7 @@
   youngs_modulus: 158000
   ultimate_stress: 2000
   poisson_ratio: 0.22
+  min_thickness: 20.0e-9
   density: 2.330
   notes: >
          strength= 1.2 - 3.0 GPa
@@ -56,6 +62,7 @@
   youngs_modulus: 1000000
   ultimate_stress: 100000
   poisson_ratio: 0.15
+  min_thickness: 0
   density: 1
   notes: >
          Single layer graphene
@@ -64,6 +71,7 @@
   youngs_modulus: 400000
   ultimate_stress: 500
   poisson_ratio: 0.19
+  min_thickness: 0
   density: 2.52
   notes: >
          None
@@ -71,6 +79,7 @@
   youngs_modulus: 865000
   ultimate_stress: 70000
   poisson_ratio: 0.19
+  min_thickness: 0
   density: 1
   notes: >
          A. Falin et al., ?Mechanical properties of atomically thin boron nitride and the role of interlayer interactions,? Nat Commun, vol. 8, Jun. 2017.
@@ -78,6 +87,7 @@
   youngs_modulus: 400000
   ultimate_stress: 3600
   poisson_ratio: 0.17
+  min_thickness: 0
   density: 2.35
   notes: >
     https://biotsavart.tripod.com/bmt.htm
@@ -86,7 +96,17 @@
   youngs_modulus: 320000
   ultimate_stress: 1000
   poisson_ratio: 0.08
+  min_thickness: 0
   density: 1.848
   notes: >
     \nu : https://materion.com/-/media/files/beryllium/beryllium-materials/mb-003physicsandchemistryofberyllium.pdf
     E & \sigma : https://www.sciencedirect.com/science/article/pii/S0895399605800564
+- name: TestMat
+  youngs_modulus: 123456
+  ultimate_stress: 789
+  poisson_ratio: 0.33
+  min_thickness: 100.0e-9
+  density: 1.23
+  notes: >
+    Material for automated testing. Do not change values with updating appropriate test(s).
+        

@@ -1,3 +1,6 @@
+import os
+import yaml
+
 from xraywindow.xray_data import XRayData
 
 class Material:
@@ -19,3 +22,19 @@ class Material:
         if self.xray_data is None: 
             self.xray_data = XRayData(self.name)
         return self.xray_data
+
+def import_materials(material_data_dir = None, material_filename = "materials.yml"):
+    '''Load data from the materials.yml file and create new Material 
+    objects for each loaded material.'''
+    if material_data_dir is None:
+        material_data_dir = os.path.join("data")
+
+    filename  = os.path.join(material_data_dir, material_filename)
+    materials = {}
+
+    with open(filename, encoding="utf-8") as f:
+        yml = yaml.load(f, yaml.SafeLoader)
+        for mat in yml:
+            materials[mat['name']] = Material(mat['name'], mat['youngs_modulus'], mat['ultimate_stress'], mat['poisson_ratio'], mat['min_thickness'])
+    
+    return materials
